@@ -1,0 +1,276 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+/* Página */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #bbbbbb;
+    height: 100%;
+    width: 100%;
+}
+
+#backgroundPrincipal {
+    background-image: url("../images/imagemApp.png");
+    height: 95%;
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    display: none;
+}
+
+#titulo {
+    font-size: 20px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-family: Caveat;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+#menu {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    font-family: Raleway;
+}
+
+#menu a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    padding: 15px;
+    user-select: none;
+}
+
+#menu a:hover {
+    background-color: #2524278e;
+}
+
+#primeiraParte {
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+}
+
+#apresentacao {
+    background-color: #2524278e;
+    width: 70%;
+    color: white;
+    padding: 40px;
+    margin: 10%;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0px 5px 5px #172733;
+}
+
+#tituloPP {
+    font-family: Raleway;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+#textoSobrePP {
+    font-family: Raleway;
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+#download {
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    align-self: center;
+    text-align: center;
+    background-color: #bbbbbb;
+    user-select: none;
+    width: 60%;
+}
+
+#comoBaixar {
+    padding: 5%;
+}
+
+#comoBaixar h2 {
+    font-family: Caveat;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#comoBaixar p {
+    font-size: 18px;
+    padding: 15px;
+    font-family: Raleway;
+}
+
+#comoBaixar p a {
+    color: black;
+}
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0px;
+}
+
+#sobre {
+    background-color: rgb(58, 58, 58);
+    padding: 5%;
+    color: white;
+    background-image: url("../images/imagemApp.png");
+}
+
+#sobre h2 {
+    font-family: Caveat;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#sobre p {
+    font-size: 18px;
+    padding: 15px;
+    font-family: Raleway;
+}
+
+#sobreDev {
+    display: flex;
+    padding: 10px;
+}
+
+#imagemDev {
+    width: 40%;
+}
+
+#imagemDev img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+#textoSobreDev {
+    font-size: 18px;
+    padding: 15px;
+    font-family: Raleway;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Raleway;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+#topo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #0084ff;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px 0px 10px 0px;
+    font-size: 16px;
+    transition: background-color 300ms linear;
+}
+
+#topo:hover {
+    background-color: #0051ff;
+}
+  
+/* Responsividade */
+#menu .icon {
+    display: none;
+}
+@media screen and (max-width: 800px){
+    #menu a {
+        display: none;
+    }
+
+    .icon {
+        padding-top: 5px;
+        padding-right: 10%;
+        float: right;
+        display: block;
+        color: white;
+    }
+
+    #menu.responsive a {
+        display: block;
+        float: left;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    #menu.responsive {
+        position: relative;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.164);
+    }
+    .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }   
+
+    iframe {
+        width: 100%;
+    }
+    #apresentacao {
+        width: 60%;
+    }
+    #sobreDev {
+        flex-direction: column;
+    }
+    #imagemDev {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
