@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raio-X-Covid</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="backgroundPrincipal">
+        <a href="javascript:void(0);" class="icon" onclick="menuResponsivo()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <header>
+            <span id="titulo">Raio-X-Covid</span>
+            <div id="menu" class="menuR">
+                <a href="#comoBaixar">Como Baixar</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </header>
+        <div id="primeiraParte">
+            <div id="apresentacao">
+                <h1 id="tituloPP">Classifique raio-x de pulmões</h1>
+                <span id="textoSobrePP"><p>Aplicativo criado com o objetivo em auxiliar a medicina diagnóstica na identificação de imagens de raio-x pulmonares com suspeita de Covid-19 ou Pneumonia.</p><br><b>Esse aplicativo NÃO substitui o diagnóstico médico.</b></span>
+                <a id="download" href="#comoBaixar">Como Baixar</a>
+            </div>
+        </div>
+    </div>
+    <div id="comoBaixar">
+        <a name="comoBaixar"></a>
+        <h2>Como Baixar</h2>
+        <p><a href="files/raio-x-covid.exe">Clique aqui</a> para baixar o instalador<br>
+        Para saber mais sobre o projeto <a href="files/raio-x-covid.exe">Clique aqui</a> para ser redirecionado ao repositório 
+        </p>
+        <p>Após fazer o download do instalador, execute-o e siga os passos no instalador. Abaixo você encontrará um pequeno vídeo demonstrando a instalação do mesmo.</p>
+        <iframe width="786" height="442" src="https://www.youtube.com/embed/F9sDLj8O8fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Após a instalação do programa, você poderá abrir o programa procurando-o na sua área de trabalho ou na pasta de instalação. Abaixo um vídeo demonstrando as duas maneiras. </p>
+        <iframe width="786" height="442" src="https://www.youtube.com/embed/EkpmM47zEDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="sobre">
+        <a name="sobre"></a>
+        <h2>Sobre o Aplicativo</h2>
+        <p>O aplicativo Raio-X-Covid foi desenvolvido como fruto de um projeto de pesquisa do Instituto Federal do Triângulo Mineiro Campus Ituiutaba. Seu objetivo é auxiliar a medicina diagnóstica na identificação de imagens de raio-x pulmonares com suspeita de Covid-19 ou Pneumonia.</p>
+        <h2>Observações Importantes</h2>
+        <p>Esse aplicativo <b>NÃO</b> substitui o diagnóstico médico.<br><br>Esse aplicativo <b>NÃO</b> deve ser utilizado como única forma de diagnóstico médico por imagens.<br><br>Esse aplicativo <b>NÃO</b> deve ser utilizado por pacientes sem o acompanhamento médico.</p>
+        <h2>Sobre o Desenvolvedor</h2>
+        <div id="sobreDev">
+            <div id="imagemDev">
+                <img src="./images/pp2.jpg" alt="Imagem Do Desenvolvedor">
+            </div>
+            <div id="textoSobreDev">Desenvolvido por Bruno Gomes Pereira, sob orientação do professor André Luiz França Batista, como fruto de um projeto de pesquisa no Instituto Federal do Triângulo Mineiro.</div>
+        </div>
+        
+    </div>
+    <footer>
+        <a name="contato"></a>
+        <h4>Redes Sociais</h4>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/bruno-gomes-1541831b8/" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.youtube.com/channel/UCFerVbNXZ4uqyLKURDq3STg" target="_blank">Instagram</a></li>
+            <li><a href="https://github.com/brunaogomes11" target="_blank">Git Hub</a></li>
+        </ul>
+        <p>Entre em contato também pelo email</p>
+        <b>brunogomesper@gmail.com</b>
+    </footer>
+    <button onclick="topFunction()" id="topo" title="Go to top">Voltar ao topo ⇮</button>
+    <script>
+        mybutton = document.getElementById("topo");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+        function menuResponsivo() {
+            var x = document.getElementById("menu");
+            if (x.className === "menuR") {
+                x.className += " responsive";
+            } else {
+                x.className = "menuR";
+            }
+        }
+    </script>
+</body>
+</html>
